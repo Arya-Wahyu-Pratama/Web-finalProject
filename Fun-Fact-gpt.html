@@ -9,19 +9,46 @@
 <body class="bg-gray-50 text-gray-800">
     <header class="bg-white shadow">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="flex items-center space-x-4">
-                <img src="img/pp.jpg" alt="Profile Picture" class="w-12 h-12 rounded-full">
-                <span class="text-xl font-bold text-gray-700">Fun Facts</span>
-            </div>
-
-            <nav class="flex space-x-6">
-                <a href="biodata.html" class="text-gray-700 hover:text-red-500 font-medium">Biodata</a>
-                <a href="contact_us.html" class="text-gray-700 hover:text-red-500 font-medium">Contact Us</a>
-                <a href="posts.html" class="text-gray-700 hover:text-red-500 font-medium">Posts</a>
-                <a href="index.html" class="bg-red-500 text-white px-4 py-2 rounded-md font-medium hover:bg-red-600">Home</a>
+            <img src="img/pp.jpg" alt="Profile Picture" class="w-12 h-12 rounded-full">
+    
+            <nav class="hidden md:flex space-x-4">
+                <a href="index.html" class="text-gray-800 hover:text-red-500">HOME</a>
+                <a href="biodata.html" class="text-gray-800 hover:text-red-500">Biodata</a>
+                <a href="posts.html" class="text-gray-800 hover:text-red-500">Posts</a>
+                <a href="Fun-Fact-gpt.html" class="text-gray-800 hover:text-red-500">Free Content</a>
+            </nav>
+    
+            <a href="#contact" class="hidden md:block bg-red-500 text-white px-4 py-2 rounded-md font-medium hover:bg-red-600">
+                Contact Us
+            </a>
+    
+            <button id="menu-btn" class="block md:hidden text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <nav class="flex flex-col space-y-2 p-4">
+                <a href="index.html" class="text-gray-800 hover:text-red-500">HOME</a>
+                <a href="biodata.html" class="text-gray-800 hover:text-red-500">Biodata</a>
+                <a href="contact_us.html" class="text-gray-800 hover:text-red-500">Contact_us</a>
+                <a href="posts.html" class="text-gray-800 hover:text-red-500">Posts</a>
+                <a href="#" class="bg-red-500 text-white px-4 py-2 rounded-md font-medium hover:bg-red-600">
+                    Free Content
+                </a>
             </nav>
         </div>
     </header>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 
     <div class="text-center py-10 bg-blue-100">
         <h1 class="text-3xl md:text-5xl font-bold text-blue-700">Fun Facts That Will Blow Your Mind!</h1>
