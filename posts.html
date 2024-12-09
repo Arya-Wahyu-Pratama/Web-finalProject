@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        async function fetchPost() {
+            try {
+                let response = await fetch('https://jsonplaceholder.typicode.com/posts/55');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                let post = await response.json();
+                displayPost(post);
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+            }
+        }
+
+        function displayPost(post) {
+            const postContainer = document.getElementById('post-container');
+            postContainer.innerHTML = `
+                <div class="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden mb-4">
+                    <div class="p-4">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-2">Post ID: ${post.id}</h2>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">${post.title}</h3>
+                        <p class="text-gray-700">${post.body}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        window.onload = fetchPost;
+    </script>
+    <title>Post Details</title>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <img src="pp.jpg" alt="Profile Picture" class="w-12 h-12 rounded-full">
+            <nav class="flex space-x-4">
+                <a href="index.html" class="hover:text-red-500">HOME</a>
+            <a href="biodata.html" class="hover:text-red-500">Biodata</a>
+            <a href="contact_us.html" class="hover:text-red-500">Contact_us</a>
+            <a href="Fun-Fact-gpt.html" class="hover:text-red-500">Free Content</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="text-center py-10">
+        <h1 class="text-3xl md:text-5xl font-bold">Post Details</h1>
+    </div>
+
+    <section id="posts" class="bg-gray-100 py-10">
+        <div class="container mx-auto px-4">
+            <div id="post-container" class="max-w-3xl mx-auto"></div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-200 py-6">
+        <div class="container mx-auto text-center space-y-2">
+            <p>Contact Us Page © 2024</p>
+            <p>
+                <a href="https://fti.unai.edu/" class="text-blue-400 hover:underline">FTI UNAI</a> |
+                <a href="https://unai.edu/" class="text-blue-400 hover:underline">Unai Website</a> |
+                <a href="https://jurnal.unai.edu/index.php/teika" class="text-blue-400 hover:underline">Jurnal Teika</a>
+            </p>
+            <p>All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

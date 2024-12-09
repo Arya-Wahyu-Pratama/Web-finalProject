@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav img {
+    height: 40px;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.button {
+    display: flex;
+    gap: 2rem;
+}
+
+.button a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.order-btn {
+    background-color: #d50000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.option {
+    display: flex;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 1500px;
+    align-items: center;
+    font-size: 30px;
+}
+
+.option img {
+    width: 50px;
+    margin-bottom: 10px;
+    padding-right: 10px; 
+}
+
+.promo-section {
+    font-size: 30px;
+    padding: 20px;
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.promo-card {
+    display:flex;
+    padding: 20px;
+}
+
+.promo-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.favorites {
+    padding: 2rem 0;
+    background: #f9f9f9;
+}
+
+.fav-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    margin-top: 1rem;
+}
+
+.fav-item {
+    text-align: center;
+}
+
+.fav-item img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.categories {
+    padding: 4rem 0;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.indonesia-map {
+    padding: 4rem 0;
+    text-align: center;
+    background: white;
+}
+
+.map-content {
+    position: relative;
+}
+
+.map-content img {
+    width: 80%;
+    max-width: 800px;
+}
+
+.bank-deals {
+    padding: 4rem 0;
+    background: #f9f9f9;
+}
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.deal-card {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-download {
+    background: #1a1a1a;
+    color: white;
+    padding: 4rem 0;
+}
+
+.app-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.app-content {
+    flex: 1;
+}
+
+.app-qr {
+    width: 200px;
+    height: 200px;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav-button {
+        display: none;
+    }
+    
+    .fav-grid, .deals-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .app-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+}
